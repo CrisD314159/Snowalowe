@@ -27,4 +27,13 @@ public class MainSnowAlowe extends Application {
     }
 
 
+    public boolean verificarUsuario(String usuario, String contrasenia) {
+        return false;
+    }
+
+    public void abrirPanelVendedor(String usuario) {
+    }
+
+    public void abrirCrearCuenta() {
+    }
 }
