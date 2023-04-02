@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <Label fx:id="SesionLabel" layoutX="147.0" layoutY="76.0" prefHeight="61.0" prefWidth="352.0" text="Inicia sesión en Snowalowe!" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userField" layoutX="238.0" layoutY="162.0" prefHeight="26.0" prefWidth="216.0" />
+      <TextField fx:id="passwordLabel" layoutX="238.0" layoutY="223.0" prefHeight="26.0" prefWidth="216.0" />
+      <Label fx:id="userLabel" layoutX="189.0" layoutY="167.0" text="Usuario:">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordField" layoutX="168.0" layoutY="228.0" text="Contraseña:">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="logButton" layoutX="364.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginEvent" text="Iniciar sesión ">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="resetpasswordButton" layoutX="115.0" layoutY="287.0" mnemonicParsing="false" onAction="#restablecerCalveEvent" text="Restablecer contraseña ">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="noAccountLabel" layoutX="115.0" layoutY="360.0" text="No tienes una cuenta en Snowalowe?">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="createAccountButton" layoutX="346.0" layoutY="355.0" mnemonicParsing="false" onAction="#crearCuentaEvent" text="Crea una aqui">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
