@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RecomendacionVendedoresAliadosController">
+   <children>
+      <TableView fx:id="tableRecomendaciones" layoutX="290.0" layoutY="41.0" prefHeight="281.0" prefWidth="296.0">
+        <columns>
+          <TableColumn fx:id="columnNombreRecomendacion" prefWidth="148.0" text="Nombre" />
+          <TableColumn fx:id="columnApellidoRecomendacion" prefWidth="139.0" text="Apellido" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="32.0" prefHeight="18.0" prefWidth="131.0" text="Filtro por me gustas" />
+      <Button fx:id="txtBuscarVendedor" layoutX="13.0" layoutY="114.0" mnemonicParsing="false" onAction="#buscarVendedor" text="Buscar" />
+      <Button fx:id="btnAtras" layoutX="14.0" layoutY="348.0" mnemonicParsing="false" onAction="#regresar" text="Atras" />
+      <Button fx:id="btnEnviarSolicitud" layoutX="325.0" layoutY="348.0" mnemonicParsing="false" onAction="#enviarSolicitud" prefHeight="30.0" prefWidth="121.0" text="Enviar solicitud" />
+      <Label layoutX="286.0" layoutY="14.0" prefHeight="18.0" prefWidth="149.0" text="Recomendaciones:" />
+      <Button fx:id="btnCambiarPagina" layoutX="465.0" layoutY="348.0" mnemonicParsing="false" onAction="#cambiarSolicitudes" prefHeight="30.0" prefWidth="121.0" text="Ir a solicitudes" />
+   </children>
+</AnchorPane>

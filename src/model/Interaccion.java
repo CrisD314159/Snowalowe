@@ -1,6 +1,10 @@
 package model;
 
-public class Interaccion {
+import java.io.Serializable;
+
+public class Interaccion implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String id;
     private String idAutor;

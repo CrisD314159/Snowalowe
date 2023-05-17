@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="596.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PanelUsuarioController">
+    <children>
+        <TabPane fx:id="mainPane" layoutX="791.0" prefHeight="596.0" prefWidth="307.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab id="tab1" text="Mis productos">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="321.0">
+                            <children>
+                                <TableView fx:id="tableProductos" layoutY="-2.0" prefHeight="568.0" prefWidth="306.0">
+                                    <columns>
+                                        <TableColumn fx:id="nombreProductoColum" prefWidth="75.0" text="Nombre" />
+                                        <TableColumn fx:id="codigoProductoColum" prefWidth="75.0" text="Codigo" />
+                                        <TableColumn fx:id="categoriaProductoColum" prefWidth="75.0" text="Categoria" />
+                                        <TableColumn fx:id="precioProductoColum" prefWidth="79.0" text="Precio" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab id="tab2" text="Mis Amigos">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="amigosTable" prefHeight="566.0" prefWidth="305.0">
+                                    <columns>
+                                        <TableColumn fx:id="nombreAmigoColum" prefWidth="154.0" text="Nombre " />
+                                        <TableColumn fx:id="apellidosAmigoColum" prefWidth="150.0" text="Apellidos" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="eliminarProductoButton" layoutX="54.0" layoutY="512.0" mnemonicParsing="false" onAction="#eliminarProducto" text="Eliminar" />
+        <Button fx:id="actualizarProductoButton" layoutX="155.0" layoutY="512.0" mnemonicParsing="false" onAction="#actualizarProducto" text="Actualizar" />
+        <Button fx:id="irMuroButton" layoutX="663.0" layoutY="486.0" mnemonicParsing="false" onAction="#irMuroVendedor" text="Ir a muro" />
+        <Button fx:id="solicitudesButton" layoutX="506.0" layoutY="161.0" mnemonicParsing="false" onAction="#obtenerSolicitudesAmistad" prefHeight="26.0" prefWidth="157.0" text="Solicitudes de amistad" />
+        <Pane fx:id="pane1" layoutX="14.0" layoutY="27.0" prefHeight="73.0" prefWidth="739.0">
+            <children>
+                <Label fx:id="bienvenidaLabel" layoutX="38.0" layoutY="23.0" prefHeight="31.0" prefWidth="372.0" stylesheets="@../Stylesheets/Style.css" text="Que bueno verte de nuevo, ">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="crearPublicacionButton" layoutX="492.0" layoutY="26.0" mnemonicParsing="false" onAction="#crearPublucacion" text="Crear publicacion" />
+            </children>
+        </Pane>
+        <Pane id="pane5" layoutX="54.0" layoutY="109.0" prefHeight="363.0" prefWidth="434.0">
+            <children>
+                <Pane id="pane6" layoutX="-29.0" layoutY="-10.0" prefHeight="406.0" prefWidth="486.0">
+                    <children>
+                  <Label fx:id="likesLabel" layoutX="280.0" layoutY="74.0" prefHeight="26.0" prefWidth="102.0" />
+                        <ImageView fx:id="imagenProducto" fitHeight="148.0" fitWidth="174.0" layoutX="55.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="nombreProductoLabel" layoutX="38.0" layoutY="155.0" prefHeight="18.0" prefWidth="191.0">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="codigoProductoLabel" layoutX="38.0" layoutY="201.0" prefHeight="17.0" prefWidth="191.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="categoriaProductoLabel" layoutX="38.0" layoutY="243.0" prefHeight="17.0" prefWidth="191.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="precioProductoLabel" layoutX="38.0" layoutY="289.0" prefHeight="17.0" prefWidth="191.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="estadoProductoLabel" layoutX="38.0" layoutY="356.0" prefHeight="17.0" prefWidth="191.0" textFill="#726e6e" />
+                        <Label fx:id="fechaLabel" layoutX="280.0" layoutY="356.0" prefHeight="17.0" prefWidth="127.0" />
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <Button fx:id="mensajesButton" layoutX="506.0" layoutY="109.0" mnemonicParsing="false" onAction="#mostrarMensajes" prefHeight="26.0" prefWidth="112.0" text="Mensaje" />
+          <Button fx:id="cerrarSesionButton" layoutX="10.0" layoutY="1.0" mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesion" />
+    </children>
+</AnchorPane>
