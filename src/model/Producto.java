@@ -2,13 +2,15 @@ package model;
 
 import javafx.scene.image.Image;
 
+import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class Producto {
+public class Producto implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     private ArrayList<Comentario> comentarios;
-    private ArrayList<Interaccion> interacciones;
+    private ArrayList<Vendedor> MeGusta;
     private String id;
     private String nombre;
     private String codigo;
@@ -17,11 +19,11 @@ public class Producto {
     private double precio;
 
     private String categoria;
-    private DateTimeFormatter date;
+    private String date;
     /*--------------CONSTRUCTOR------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-    public Producto(ArrayList<Comentario> comentarios, ArrayList<Interaccion> interacciones, String id, String nombre, String codigo, Image imagen, EstadoProducto estado, double precio, DateTimeFormatter date, String categoria) {
-        this.comentarios = new ArrayList<>();
-        this.interacciones = new ArrayList<>();
+    public Producto(ArrayList<Comentario> comentarios, ArrayList<Interaccion> interacciones, String id, String nombre, String codigo, Image imagen, EstadoProducto estado, double precio, String date, String categoria) {
+        this.comentarios = new ArrayList<Comentario>();
+        this.MeGusta = new ArrayList<Vendedor>();
         this.id = id;
         this.nombre = nombre;
         this.codigo = codigo;
@@ -33,6 +35,9 @@ public class Producto {
     }
 
     public Producto() {
+        this.comentarios = new ArrayList<Comentario>();
+        this.MeGusta = new ArrayList<Vendedor>();
+
     }
     /*----------------METODOS--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -48,13 +53,9 @@ public class Producto {
         this.comentarios = comentarios;
     }
 
-    public ArrayList<Interaccion> getInteracciones() {
-        return interacciones;
-    }
 
-    public void setInteracciones(ArrayList<Interaccion> interacciones) {
-        this.interacciones = interacciones;
-    }
+
+
 
     public String getId() {
         return id;
@@ -96,11 +97,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    public DateTimeFormatter getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(DateTimeFormatter date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -118,5 +119,24 @@ public class Producto {
 
     public void setImage(Image image) {
         this.image = image;
+    }
+
+
+    public ArrayList<Vendedor> getMeGusta() {
+        return MeGusta;
+    }
+
+    public void setMeGusta(ArrayList<Vendedor> meGusta) {
+        MeGusta = meGusta;
+    }
+
+    public boolean verificarMegusta(Vendedor vendedorLogeado) {
+        for (Vendedor vendedor:MeGusta) {
+            if(vendedor.getCedula().equals(vendedorLogeado.getCedula())){
+                return true;
+            }
+
+        }
+        return false;
     }
 }

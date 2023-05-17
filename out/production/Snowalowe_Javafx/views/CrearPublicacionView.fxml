@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="sttage" prefHeight="511.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CrearPublicacionController">
+    <children>
+        <Label layoutX="124.0" layoutY="246.0" prefHeight="20.0" prefWidth="63.0" text="Nombre:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="122.0" layoutY="284.0" prefHeight="20.0" prefWidth="59.0" text="Codigo:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="122.0" layoutY="319.0" prefHeight="20.0" prefWidth="59.0" text="Precio:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="120.0" layoutY="352.0" text="Categoria:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nombreProductoLabel" layoutX="209.0" layoutY="243.0" />
+        <TextField fx:id="codigoProductoLabel" layoutX="209.0" layoutY="281.0" />
+        <TextField fx:id="precioProductoLabel" layoutX="209.0" layoutY="316.0" />
+        <TextField fx:id="categoriaProductoLabel" layoutX="209.0" layoutY="351.0" />
+        <Button fx:id="publicarButton" layoutX="284.0" layoutY="443.0" mnemonicParsing="false" onAction="#publicarProducto" text="Publicar" />
+        <Button fx:id="atrasButton" layoutX="143.0" layoutY="443.0" mnemonicParsing="false" onAction="#irAtras" text="Atras" />
+        <Button fx:id="seleccionImagen" layoutX="181.0" layoutY="203.0" mnemonicParsing="false" onAction="#seleccionarImagen" text="Seleccionar imagen" />
+        <Label layoutX="122.0" layoutY="385.0" prefHeight="17.0" prefWidth="59.0" text="Fecha:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <DatePicker fx:id="fechaPicker" layoutX="209.0" layoutY="387.0" onAction="#obtenerFecha" prefHeight="25.0" prefWidth="149.0" />
+        <Pane id="pane2" layoutX="134.0" layoutY="14.0" prefHeight="176.0" prefWidth="226.0">
+            <children>
+                <ImageView id="image-view" fx:id="imagen" fitHeight="169.0" fitWidth="199.0" layoutX="14.0" layoutY="4.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

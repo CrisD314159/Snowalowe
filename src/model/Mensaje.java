@@ -1,8 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
 
-public class Mensaje {
+public class Mensaje implements Serializable {
+    private static final long serialVersionUID = 1L;
     private String id;
     private String idAutor;
     private String descripcion;

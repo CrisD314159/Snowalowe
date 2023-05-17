@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="641.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.VendedorAmigoController">
+    <children>
+        <TabPane layoutX="464.0" layoutY="14.0" prefHeight="426.0" prefWidth="306.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab id="tab3" text="Productos">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="tableProductos" layoutX="-4.0" prefHeight="396.0" prefWidth="314.0">
+                                    <columns>
+                                        <TableColumn fx:id="nombreColum" prefWidth="90.0" text="Nombre" />
+                                        <TableColumn fx:id="codigoColum" prefWidth="72.0" text="Codigo" />
+                                        <TableColumn fx:id="precioColum" prefWidth="71.0" text="Precio" />
+                                        <TableColumn fx:id="categoriaColum" prefWidth="76.0" text="Categoria" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab id="tab4" text="Comentarios">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="306.0">
+                            <children>
+                                <TableView fx:id="tableComentarios" prefHeight="392.0" prefWidth="306.0">
+                                    <columns>
+                                        <TableColumn fx:id="comentariosColum" prefWidth="305.0" text="Comentarios" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Pane id="pane4" layoutX="14.0" layoutY="14.0" prefHeight="106.0" prefWidth="436.0">
+            <children>
+                <Label fx:id="nombreLabel" layoutX="28.0" layoutY="14.0" prefHeight="23.0" prefWidth="382.0" text="Nombre">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="ApellidoLabel" layoutX="28.0" layoutY="59.0" prefHeight="23.0" prefWidth="382.0" text="Apellido">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <ImageView fx:id="imagenProducto" fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="nombreProductoLabel" layoutX="52.0" layoutY="297.0" prefHeight="23.0" prefWidth="257.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="codigoProductoLabel" layoutX="52.0" layoutY="337.0" prefHeight="18.0" prefWidth="257.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="categoriaProductolabel" layoutX="52.0" layoutY="373.0" prefHeight="18.0" prefWidth="257.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="precioProductoLabel" layoutX="54.0" layoutY="414.0" prefHeight="18.0" prefWidth="257.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="estadoProductoLabel" layoutX="52.0" layoutY="458.0" prefHeight="17.0" prefWidth="142.0" />
+        <Button fx:id="meGustaButton" layoutX="29.0" layoutY="526.0" mnemonicParsing="false" onAction="#meGusta" text="Me gusta" />
+        <Button fx:id="chatButton" layoutX="249.0" layoutY="526.0" mnemonicParsing="false" onAction="#irChat" text="Chat" />
+        <Button fx:id="volverButton" layoutX="13.0" layoutY="599.0" mnemonicParsing="false" onAction="#volverAtras" text="Volver" />
+        <Label fx:id="fechaLabel" layoutX="249.0" layoutY="458.0" prefHeight="17.0" prefWidth="127.0" />
+        <Label fx:id="numeroMeGusta" layoutX="102.0" layoutY="531.0" prefHeight="17.0" prefWidth="92.0" />
+        <Button fx:id="comentarButton" layoutX="555.0" layoutY="578.0" mnemonicParsing="false" onAction="#agregarComentario" text="Agregar Comentario" />
+        <TextField fx:id="comentarioField" layoutX="469.0" layoutY="456.0" prefHeight="97.0" prefWidth="299.0" />
+    </children>
+</AnchorPane>

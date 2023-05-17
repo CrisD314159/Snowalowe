@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SolicitudesController">
+   <children>
+      <TableView fx:id="tableListaSolicitudes" layoutX="162.0" layoutY="39.0" prefHeight="288.0" prefWidth="249.0">
+        <columns>
+          <TableColumn fx:id="columnNombre" prefWidth="135.0" text="Nombre" />
+          <TableColumn fx:id="columnApellido" prefWidth="121.0" text="Apellido" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="147.0" text="Solicitudes">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="btnRegresar" layoutX="14.0" layoutY="351.0" mnemonicParsing="false" onAction="#regresar" prefHeight="25.0" prefWidth="98.0" text="Regresar" />
+      <Button fx:id="btnAceptarSolicitud" layoutX="446.0" layoutY="255.0" mnemonicParsing="false" onAction="#aceptarSolicitud" prefHeight="26.0" prefWidth="139.0" text="Aceptar solicitud" />
+      <Button fx:id="btnRechazarSolicitud" layoutX="444.0" layoutY="302.0" mnemonicParsing="false" onAction="#rechazarSolicitud" prefHeight="26.0" prefWidth="139.0" text="Rechazar solicitud" />
+   </children>
+</AnchorPane>
