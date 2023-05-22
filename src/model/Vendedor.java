@@ -237,6 +237,15 @@ public class Vendedor implements Serializable {
     }
 
 
+    public int getNumeroMegusta() {
+        int numeroMegusta = 0;
+        for (Producto producto:productos) {
+            if(producto!= null){
+                numeroMegusta+= producto.getMeGusta().size();
+            }
 
+        }
+        return numeroMegusta;
 
+    }
 }

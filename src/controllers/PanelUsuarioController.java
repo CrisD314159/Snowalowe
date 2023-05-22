@@ -18,6 +18,7 @@ import model.Vendedor;
 import java.io.IOException;
 
 public class PanelUsuarioController {
+
     ObservableList<Producto> listaProductosData = FXCollections.observableArrayList();
 
     ObservableList<Vendedor> listaVendedoresData = FXCollections.observableArrayList();
@@ -31,6 +32,8 @@ public class PanelUsuarioController {
     ModelFactoryController singleton;
 
     private Vendedor vendedor;
+
+
     @FXML
     private Button actualizarProductoButton;
 
@@ -117,8 +120,6 @@ public class PanelUsuarioController {
     @FXML
     void eliminarProducto(ActionEvent event) throws ProductoException {
         eliminarProductoAction();
-
-
     }
 
     private void eliminarProductoAction()  {
