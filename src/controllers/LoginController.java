@@ -36,6 +36,9 @@ public class LoginController implements Alerta {
     private Label passwordLabel;
 
     @FXML
+    private Button loginAdminButton;
+
+    @FXML
     private PasswordField passwordField;
 
     @FXML
@@ -66,6 +69,7 @@ public class LoginController implements Alerta {
 
     @FXML
     void restablecerCalveEvent(ActionEvent event) {
+    main.abrirRecuperarContrasenia();
 
     }
 
@@ -104,6 +108,12 @@ public class LoginController implements Alerta {
             return false;
         }
         return true;
+    }
+
+    @FXML
+    void loginAdmin(ActionEvent event) {
+        main.abrirLoginAdministrador();
+
     }
 
     public void setMain(MainSnowAlowe mainSnowAlowe) {

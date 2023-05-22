@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="19.0.2" class="java.beans.XMLDecoder">
  <object class="model.Red" id="Red0">
+  <void property="listaAdministradores">
+   <void method="add">
+    <object class="model.Administrador">
+     <void property="apellido">
+      <string>Vargas</string>
+     </void>
+     <void property="cedula">
+      <string>1092850502</string>
+     </void>
+     <void property="cuenta">
+      <object class="model.Cuenta">
+       <void property="contrasenia">
+        <string>3456</string>
+       </void>
+       <void property="usuario">
+        <string>admin1</string>
+       </void>
+      </object>
+     </void>
+     <void property="direccion">
+      <string>Calle 13</string>
+     </void>
+     <void property="nombre">
+      <string>Cristian</string>
+     </void>
+    </object>
+   </void>
+  </void>
   <void property="listaUsuarios">
    <void method="add">
     <object class="model.Vendedor" id="Vendedor0">
@@ -18,9 +46,6 @@
        <string>user1</string>
       </void>
      </void>
-     <void property="direccion">
-      <string>Armenia</string>
-     </void>
      <void property="nombre">
       <string>juan</string>
      </void>
@@ -28,489 +53,6 @@
    </void>
    <void method="add">
     <object class="model.Vendedor" id="Vendedor1">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor2">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor3">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor4">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor5">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor6">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor7">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor8">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor9">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor10">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor11">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor12">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor13">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor14">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor15">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor16">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor17">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor18">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor19">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor20">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor21">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor22">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor23">
-     <void property="apellido">
-      <string>arias</string>
-     </void>
-     <void property="cedula">
-      <string>125454</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1234</string>
-      </void>
-      <void property="usuario">
-       <string>user1</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>juan</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor24">
      <void property="apellido">
       <string>a</string>
      </void>
@@ -525,53 +67,173 @@
        <string>a</string>
       </void>
      </void>
+     <void property="listaRecomendados">
+      <void method="add">
+       <object idref="Vendedor0"/>
+      </void>
+      <void method="add">
+       <object class="model.Vendedor" id="Vendedor2">
+        <void property="apellido">
+         <string>s</string>
+        </void>
+        <void property="cedula">
+         <string>s</string>
+        </void>
+        <void property="cuenta">
+         <void property="contrasenia">
+          <string>1</string>
+         </void>
+         <void property="usuario">
+          <string>s</string>
+         </void>
+        </void>
+        <void property="listaAmigos">
+         <void method="add">
+          <object class="model.Vendedor" id="Vendedor3">
+           <void property="apellido">
+            <string>Vargas Loaiza</string>
+           </void>
+           <void property="cedula">
+            <string>Calle 12</string>
+           </void>
+           <void property="cuenta">
+            <void property="contrasenia">
+             <string>24</string>
+            </void>
+            <void property="usuario">
+             <string>Crisv</string>
+            </void>
+           </void>
+           <void property="direccion">
+            <string>12312412</string>
+           </void>
+           <void property="listaAmigos">
+            <void method="add">
+             <object idref="Vendedor2"/>
+            </void>
+            <void method="add">
+             <object class="model.Vendedor" id="Vendedor4">
+              <void property="apellido">
+               <string>Loaiza</string>
+              </void>
+              <void property="cedula">
+               <string>121212</string>
+              </void>
+              <void property="cuenta">
+               <void property="contrasenia">
+                <string>123</string>
+               </void>
+               <void property="usuario">
+                <string>lili</string>
+               </void>
+              </void>
+              <void property="direccion">
+               <string>312312</string>
+              </void>
+              <void property="listaAmigos">
+               <void method="add">
+                <object idref="Vendedor3"/>
+               </void>
+              </void>
+              <void property="listaRecomendados">
+               <void method="add">
+                <object idref="Vendedor0"/>
+               </void>
+               <void method="add">
+                <object idref="Vendedor1"/>
+               </void>
+               <void method="add">
+                <object idref="Vendedor2"/>
+               </void>
+               <void method="add">
+                <object idref="Vendedor3"/>
+               </void>
+              </void>
+              <void property="nombre">
+               <string>Liliana</string>
+              </void>
+             </object>
+            </void>
+           </void>
+           <void property="listaRecomendados">
+            <void method="add">
+             <object idref="Vendedor0"/>
+            </void>
+            <void method="add">
+             <object idref="Vendedor1"/>
+            </void>
+            <void method="add">
+             <object idref="Vendedor2"/>
+            </void>
+           </void>
+           <void property="nombre">
+            <string>Cristian David</string>
+           </void>
+           <void property="productos">
+            <void method="add">
+             <object class="model.Producto" id="Producto0">
+              <void property="categoria">
+               <string>Consolas</string>
+              </void>
+              <void property="codigo">
+               <string>121</string>
+              </void>
+              <void property="date">
+               <string>2023-05-21</string>
+              </void>
+              <void property="estado">
+               <object class="java.lang.Enum" id="EstadoProducto0" method="valueOf">
+                <class>model.EstadoProducto</class>
+                <string>PUBLICADO</string>
+               </object>
+              </void>
+              <void property="meGusta">
+               <void method="add">
+                <object idref="Vendedor2"/>
+               </void>
+              </void>
+              <void property="nombre">
+               <string>Xbox One</string>
+              </void>
+              <void property="precio">
+               <double>700000.0</double>
+              </void>
+             </object>
+            </void>
+            <void method="add">
+             <object class="model.Producto">
+              <void property="categoria">
+               <string>Cafe</string>
+              </void>
+              <void property="codigo">
+               <string>1234</string>
+              </void>
+              <void property="date">
+               <string>2023-05-21</string>
+              </void>
+              <void property="estado">
+               <object idref="EstadoProducto0"/>
+              </void>
+              <void property="nombre">
+               <string>Cafe quindio</string>
+              </void>
+              <void property="precio">
+               <double>20000.0</double>
+              </void>
+             </object>
+            </void>
+           </void>
+          </object>
+         </void>
+        </void>
+        <void property="nombre">
+         <string>s</string>
+        </void>
+       </object>
+      </void>
+     </void>
      <void property="nombre">
       <string>a</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor25">
-     <void property="apellido">
-      <string>s</string>
-     </void>
-     <void property="cedula">
-      <string>s</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>1</string>
-      </void>
-      <void property="usuario">
-       <string>s</string>
-      </void>
-     </void>
-     <void property="nombre">
-      <string>s</string>
-     </void>
-    </object>
-   </void>
-   <void method="add">
-    <object class="model.Vendedor" id="Vendedor26">
-     <void property="apellido">
-      <string>Vargas</string>
-     </void>
-     <void property="cedula">
-      <string>Calle 13 #24-26</string>
-     </void>
-     <void property="cuenta">
-      <void property="contrasenia">
-       <string>24</string>
-      </void>
-      <void property="usuario">
-       <string>Crisv</string>
-      </void>
-     </void>
-     <void property="direccion">
-      <string>231241</string>
-     </void>
-     <void property="nombre">
-      <string>Cristian</string>
      </void>
      <void property="productos">
       <void method="add">
@@ -580,27 +242,33 @@
          <string>Cafe</string>
         </void>
         <void property="codigo">
-         <string>31212</string>
+         <string>212312</string>
         </void>
         <void property="date">
-         <string>2023-05-17</string>
+         <string>2023-05-21</string>
         </void>
         <void property="estado">
-         <object class="java.lang.Enum" method="valueOf">
-          <class>model.EstadoProducto</class>
-          <string>PUBLICADO</string>
-         </object>
+         <object idref="EstadoProducto0"/>
         </void>
         <void property="nombre">
-         <string>Cafe</string>
+         <string>cafe</string>
         </void>
         <void property="precio">
-         <double>30000.0</double>
+         <double>12000.0</double>
         </void>
        </object>
       </void>
      </void>
     </object>
+   </void>
+   <void method="add">
+    <object idref="Vendedor2"/>
+   </void>
+   <void method="add">
+    <object idref="Vendedor3"/>
+   </void>
+   <void method="add">
+    <object idref="Vendedor4"/>
    </void>
   </void>
  </object>

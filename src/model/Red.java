@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Red implements Serializable {
@@ -16,6 +15,8 @@ public class Red implements Serializable {
 
     private String nombre;
     private ArrayList<Vendedor> listaUsuarios;
+
+    private ArrayList<Administrador> listaAdministradores;
     private ArrayList<Cuenta> listaCuentas;
 
     /*----------------CONSTRUCTOR--------------------------------------------------*/
@@ -25,6 +26,7 @@ public class Red implements Serializable {
     public Red(String nombre) {
         this.listaUsuarios = new ArrayList<Vendedor>();
         this.listaCuentas = new ArrayList<Cuenta>();
+        this.listaAdministradores = new ArrayList<Administrador>();
         this.nombre = nombre;
         //inicializarDatos();
     }
@@ -44,6 +46,7 @@ public class Red implements Serializable {
     public Red() {
         this.listaUsuarios = new ArrayList<Vendedor>();
         this.listaCuentas = new ArrayList<Cuenta>();
+        this.listaAdministradores = new ArrayList<Administrador>();
     }
 
     /*----------------METODOS-------------------------------------------------------*/
@@ -60,6 +63,14 @@ public class Red implements Serializable {
 
     /*----------------GETTERS & SETTERS-----------------------------------------------*/
 
+
+    public ArrayList<Administrador> getListaAdministradores() {
+        return listaAdministradores;
+    }
+
+    public void setListaAdministradores(ArrayList<Administrador> listaAdministradores) {
+        this.listaAdministradores = listaAdministradores;
+    }
 
     public void setUsuarios(ArrayList<Vendedor> usuarios) {
         this.listaUsuarios = usuarios;
@@ -266,8 +277,7 @@ public class Red implements Serializable {
     /*-------METODOS DE DELETE------*/
 
     public boolean eliminarVendedor(String codigo){
-        for (Vendedor vendedor:listaUsuarios
-        ) {
+        for (Vendedor vendedor:listaUsuarios) {
             if (vendedor.getCedula().equals(codigo)){
                 listaUsuarios.remove(vendedor);
                 return true;
@@ -348,6 +358,17 @@ public class Red implements Serializable {
         return false;
     }
 
+    public boolean verificarUsuarioAdministrador(String user, String password) {
+        for (Administrador admin:listaAdministradores) {
+            if(admin.verificarCuenta(user, password)){
+                return true;
+            }
+
+        }
+        return false;
+
+    }
+
     public ArrayList<Vendedor> obtenerListaAmigos(Vendedor vendedorLogeado) {
         return vendedorLogeado.getListaAmigos();
     }
@@ -365,6 +386,18 @@ public class Red implements Serializable {
             }
         }
         return vendedorEncontrado;
+    }
+
+    public Administrador obtenerAdmin(String user, String password) {
+        Administrador adminEncontrado = null;
+        for (Administrador admin:listaAdministradores) {
+            if (admin.verificarCuenta(user, password)){
+                adminEncontrado = admin;
+                return adminEncontrado;
+            }
+        }
+        return adminEncontrado;
+
     }
 
     public Comentario agregarComentario(Vendedor vendedorLogeado, Vendedor vendedorAliado, String mensaje, Producto productoS) {
@@ -479,5 +512,16 @@ public class Red implements Serializable {
 
     public ArrayList<Mensaje> obtenerListaMensajes(Vendedor vendedorLogeado) {
         return vendedorLogeado.getMensajes();
+    }
+
+
+    public String encontrarCedula(String cedula) {
+        for (Vendedor vendedor:listaUsuarios
+             ) {
+            if(vendedor.getCedula().equals(cedula)){
+                return vendedor.getCuenta().getContrasenia();
+            }
+        }
+        return null;
     }
 }

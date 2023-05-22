@@ -35,6 +35,7 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.setResizable(false);
         stage.show();
     }
@@ -60,6 +61,8 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Bienvenid@ a tu panel principal de Snowalowe");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
 
     }
@@ -75,6 +78,8 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Bienvenid@ a Snowalowe");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -98,6 +103,8 @@ public class MainSnowAlowe extends Application {
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
             stage.setTitle("Crea tu producto");
             stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -116,6 +123,8 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Crea tu producto");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
 
     }
@@ -141,6 +150,8 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Crea tu producto");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -158,6 +169,8 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Crea tu producto");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -178,6 +191,8 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Crea tu producto");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
 
     }
@@ -213,6 +228,8 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Crea tu producto");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
 
     }
@@ -230,7 +247,86 @@ public class MainSnowAlowe extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
         stage.setTitle("Crea tu producto");
         stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
+
+    }
+
+    public void abrirLoginAdministrador() {
+        try{
+            //carga el fxml
+            FXMLLoader loader = new FXMLLoader();
+            //localiza el fxml
+            loader.setLocation(MainSnowAlowe.class.getResource("../views/LoginAdministrador.fxml"));
+            AnchorPane rootLayout = loader.load();
+            //invoca los controladores
+            AdministradorLoginController controller = loader.getController();
+            controller.setMain(this);
+            //inicializa la escena
+            Scene scene = new Scene(rootLayout);
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
+            stage.setTitle("Bienvenido de vuelta");
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void abrirPanelAdministrador(Administrador administradorLogeado) {
+        try{
+            //carga el fxml
+            FXMLLoader loader = new FXMLLoader();
+            //localiza el fxml
+            loader.setLocation(MainSnowAlowe.class.getResource("../views/PanelAdministrador.fxml"));
+            AnchorPane rootLayout = loader.load();
+            //invoca los controladores
+            PanelAdministradorController controller = loader.getController();
+            controller.setMain(this);
+            controller.setAdministrador(administradorLogeado);
+            //inicializa la escena
+            Scene scene = new Scene(rootLayout);
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
+            stage.setTitle("Bienvenido de vuelta");
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void abrirRecuperarContrasenia() {
+        try{
+            //carga el fxml
+            FXMLLoader loader = new FXMLLoader();
+            //localiza el fxml
+            loader.setLocation(MainSnowAlowe.class.getResource("../views/ReestablecerContrasenia.fxml"));
+            AnchorPane rootLayout = loader.load();
+            //invoca los controladores
+            RestablecerContraseniaController controller = loader.getController();
+            controller.setMain(this);
+
+            //inicializa la escena
+            Scene scene = new Scene(rootLayout);
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("../Stylesheets/Style.css")).toExternalForm());
+            stage.setTitle("Recupera tu contraseña");
+            stage.setScene(scene);
+            stage.centerOnScreen();
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 }

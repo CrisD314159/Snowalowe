@@ -5,7 +5,6 @@ package controllers;
 import exceptions.ProductoException;
 import exceptions.VendedorException;
 import javafx.scene.image.Image;
-import javafx.stage.Stage;
 
 import model.*;
 import persistencia.Persistencia;
@@ -19,13 +18,12 @@ public class ModelFactoryController implements Runnable{
 	Red red;
 
 	Thread guardarXml;
-
-
-	Thread cargarXml;
-
-
 	Thread guardarBinario;
-	Thread cargarBinario;
+	Thread guardarLog;
+
+	public String encontrarContrasenia(String cedula) {
+		return red.encontrarCedula(cedula);
+	}
 
 
 	//------------------------------  Singleton ------------------------------------------------
@@ -44,10 +42,12 @@ public class ModelFactoryController implements Runnable{
 
 
 		if(red == null){
-			//iniciarSalvarDatosPrueba();
+			//inicializarDatos();
+			
 
 			cargarResourceXML();
 			guardarResourceXML();
+
 
 
 		}
@@ -69,6 +69,7 @@ public class ModelFactoryController implements Runnable{
 			Persistencia.guardarVendedores(getRed().getListaUsuarios());
 
 
+
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -81,13 +82,12 @@ public class ModelFactoryController implements Runnable{
 	public void run() {
 		Thread hiloActual = Thread.currentThread();
 		if(hiloActual == guardarXml){
+			Persistencia.guardarRecursoRedXML(red);
 			//guardarResourceXml();
 		}
-		if (hiloActual ==  cargarXml){
-			//cargarResourceXml();
+		if(hiloActual == guardarBinario){
+			Persistencia.guardarRecursoBancoBinario(red);
 		}
-
-
 
 	}
 
@@ -108,10 +108,6 @@ public class ModelFactoryController implements Runnable{
 
 
 	public void cargarResourceXML() {
-		/**
-		 * cargarXml = new Thread(this);
-		 * 		cargarXml.start();
-		 */
 		red = Persistencia.cargarRecursoRedXML();
 
 	}
@@ -121,11 +117,9 @@ public class ModelFactoryController implements Runnable{
 
 
 	public void guardarResourceXML() {
-		/**
-		 * guardarXml = new Thread(this);
-		 * 		guardarXml.start();
-		 */
-		Persistencia.guardarRecursoRedXML(red);
+		guardarXml = new Thread(this);
+		guardarXml.start();
+
 
 	}
 
@@ -145,6 +139,15 @@ public class ModelFactoryController implements Runnable{
 		cliente.setCuenta(cuenta);
 
 		red.getListaUsuarios().add(cliente);
+
+		Cuenta cuenta1 = new Cuenta("admin1", "3456");
+		Administrador admin = new Administrador();
+		admin.setNombre("Cristian");
+		admin.setApellido("Vargas");
+		admin.setCedula("1092850502");
+		admin.setDireccion("Calle 13");
+		admin.setCuenta(cuenta1);
+		red.getListaAdministradores().add(admin);
 
 
 
@@ -201,10 +204,12 @@ public class ModelFactoryController implements Runnable{
 
 	public Boolean eliminarVendedor(String cedula) {
 
-		boolean flagEmpleadoExiste = false;
+		boolean vendedor = false;
 
-		flagEmpleadoExiste = getRed().eliminarVendedor(cedula);
-		return flagEmpleadoExiste;
+		vendedor = red.eliminarVendedor(cedula);
+		guardarResourceXML();
+
+		return vendedor;
 	}
 
 
@@ -359,6 +364,31 @@ public class ModelFactoryController implements Runnable{
 		return comentario;
 	}
 
+	public boolean verificarUserAdministrador(String user, String password) {
+		boolean cuenta = false;
+		try {
+			cuenta =  red.verificarUsuarioAdministrador(user, password);
+			guardarResourceXML();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		return cuenta;
+	}
+
+	public Administrador obtenerAdministrador(String user, String password) {
+		Administrador admin = null;
+		try {
+			admin =  red.obtenerAdmin(user, password);
+			guardarResourceXML();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		return admin;
+	}
+
+	public ArrayList<Vendedor> obtenerListaVendedoresAliados() {
+		return red.getListaUsuarios();
+	}
 
 
 
